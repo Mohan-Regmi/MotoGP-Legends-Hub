@@ -3,29 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
-    <title>login</title>
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+      }
+
+      .main_login_form {
+        background: #fff;
+        border: 2px solid #e10600; /* MotoGP red */
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #e10600;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .login_content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin: 10px 0 5px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #e10600;
+        box-shadow: 0 0 5px rgba(225, 6, 0, 0.5);
+      }
+
+      .login_btn {
+        background: #e10600;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        margin: 15px 0;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s ease;
+        width: 100%;
+      }
+
+      .login_btn:hover {
+        background: #b30500;
+        transform: scale(1.02);
+      }
+
+      .a_login_btn button {
+        background: #000;
+        color: #fff;
+        margin-top: 5px;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      a:hover {
+        color: #e10600;
+      }
+    </style>
   </head>
-  <body style="background-image: url('../.../assets/theme.jpeg')">
+  <body>
     <div class="container">
       <div class="main_login_form">
-        <i
-          ><h1 style="text-align: center; padding-bottom: 10px; color: black">
-            login
-          </h1></i
-        >
-        <hr class="login_hr" />
-        <br />
+        <h1>Login</h1>
         <div class="login_content">
-          <label for=""> Username</label>
-          <input type="email" name="" id="" /> <br />
-          <label for=""> Password</label>
-          <input type="password" name="" id="" /><br />
-          <a href="" style="color: white">Create new account</a><br />
-          <button class="login_btn">Submit</button><br />
-          <a href="index.html" style="text-decoration: none" class="a_login_btn"
-            ><button class="login_btn">Go Back</button></a
-          >
+          <form action="../php_folder/login.php" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" required /> <br> <br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" required /> <br> <br><br>
+
+            <a href="../Register/register.html">Create new account</a>
+
+            <button type="submit" class="login_btn">Submit</button>
+          </form>
+
+          <a href="index.html" class="a_login_btn">
+            <button class="login_btn">Go Back</button>
+          </a>
         </div>
       </div>
     </div>

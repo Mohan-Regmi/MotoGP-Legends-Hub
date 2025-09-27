@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    
+
+    .login_btn:hover {
+      background: #e10600;
+      color: #fff;
+    }
+
+    /* Hero / Banner */
+    .hero {
+      background: url('https://m.media-amazon.com/images/I/81e6kIKXjYL._AC_UF1000,1000_QL80_.jpg') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(0, 0, 0);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    /* Contact Form Section */
+    .contact-section {
+      max-width: 700px;
+      margin: -80px auto 50px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      color: #e10600;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-section label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .contact-section input:focus,
+    .contact-section textarea:focus {
+      border: 2px solid #e10600;
+      outline: none;
+    }
+
+    .contact-section button {
+      background: #e10600;
+      color: #fff;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-section button:hover {
+      background: #b30500;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Navbar -->
+  <nav>
+    <a href=""><img src="../../assets/ducati logo.png" alt="Ducati Logo" /></a>
+    <a href="../Home/home.html" class="anchor_tag">Home</a>
+    <a href="../Bike/bike.html" class="anchor_tag">Bike</a>
+    <a href="" class="anchor_tag">Accessories</a>
+    <a href="../Blogs/blogs.html" class="anchor_tag">Blogs</a>
+    <a href="../Rider/rider.html" class="anchor_tag">Rider</a>
+    <a href="../Contact/contact.html" style="color: rgb(224, 6, 6)" class="anchor_tag">Contact Us</a>
+    <a href="../login/login.html"><button class="login_btn">LogIn</button></a>
+  </nav>
+</div>
+
+  <!-- Hero Banner -->
+  <div class="hero">
+    <h1>Contact Us</h1>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="contact-section">
+    <h2>Get In Touch</h2>
+    <form action="../php_folder/contact.php" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" placeholder="Your full name" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Your email address" required>
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MotoGP World. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
