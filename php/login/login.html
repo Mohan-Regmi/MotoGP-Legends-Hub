@@ -124,5 +124,21 @@
         </div>
       </div>
     </div>
-  </body>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const pass = document.getElementById("password").value;
+
+      // hardcoded login credentials
+      if (email === "test@example.com" && pass === "123456") {
+        alert("Login successful!");
+        window.location.href = "blogs.html";
+      } else {
+        alert("Invalid email or password!");
+      }
+    }
+  </script>
+</body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>Register</title>
+</head>
+<body style="background:#f2f2f2">
+  <div class="container">
+    <div class="main_login_form">
+      <h1 style="text-align:center; color:black">Register</h1>
+      <hr class="login_hr" />
+      <div class="login_content">
+        <label for="newEmail">Email</label>
+        <input type="email" id="newEmail" required />
+
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" required />
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" required />
+
+        <button class="login_btn" onclick="register()">Register</button>
+        <a href="../login/login.html" class="a_login_btn">
+          <button type="button" class="login_btn">Back to Login</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function register() {
+      const email = document.getElementById("newEmail").value;
+      const pass = document.getElementById("newPassword").value;
+      const confirm = document.getElementById("confirmPassword").value;
+
+      if (pass !== confirm) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      // Just fake success message (not saving anywhere)
+      alert("Registration successful!\nUse email: test@example.com and password: 123456 to login.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
