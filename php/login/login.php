@@ -113,14 +113,12 @@
             <label for="password">Password</label>
             <input type="password" name="password" required /> <br> <br><br>
 
-            <a href="../Register/register.html">Create new account</a>
+            <a href="../Register/register.php">Create new account</a>
 
             <button type="submit" class="login_btn">Submit</button>
           </form>
 
-          <a href="index.html" class="a_login_btn">
-            <button class="login_btn">Go Back</button>
-          </a>
+         
         </div>
       </div>
     </div>
@@ -134,7 +132,7 @@
       // hardcoded login credentials
       if (email === "test@example.com" && pass === "123456") {
         alert("Login successful!");
-        window.location.href = "blogs.html";
+        window.location.href = "blogs.php";
       } else {
         alert("Invalid email or password!");
       }

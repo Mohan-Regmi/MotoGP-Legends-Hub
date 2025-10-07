@@ -23,7 +23,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $name, $email, $message);
 
 if ($stmt->execute()) {
-    echo "<script>alert('Message sent successfully!'); window.location.href='../contact/contact.html';</script>";
+    echo "<script>alert('Message sent successfully!'); window.location.href='../contact/contact.php';</script>";
 } else {
     echo "Error: " . $stmt->error;
 }

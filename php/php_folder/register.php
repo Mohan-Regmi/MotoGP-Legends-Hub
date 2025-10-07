@@ -27,7 +27,7 @@ $sql = "INSERT INTO login (username, password) VALUES ('$username', '$password')
 
 if ($conn->query($sql) === TRUE) {
     echo "<script>alert('Registration successful! You can now log in.');
-          window.location.href='../login/login.html';</script>";
+          window.location.href='../login/login.php';</script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
