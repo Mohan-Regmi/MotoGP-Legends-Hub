@@ -32,9 +32,9 @@ $stmt = $conn->prepare("INSERT INTO blogs (title, content, category, author, sta
 $stmt->bind_param("ssssss", $title, $content, $category, $author, $status, $featured_image);
 
 if ($stmt->execute()) {
-    echo "<script>alert('✅ Blog added successfully!'); window.location.href='../Admin/addBlogs.php';</script>";
+    echo "<script>alert('Blog added successfully!'); window.location.href='../Admin/showBlog.php';</script>";
 } else {
-    echo "<script>alert('❌ Error adding blog: " . $conn->error . "'); window.history.back();</script>";
+    echo "<script>alert('Error adding blog: " . $conn->error . "'); window.history.back();</script>";
 }
 
 $stmt->close();

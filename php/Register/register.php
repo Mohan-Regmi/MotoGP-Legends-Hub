@@ -113,7 +113,7 @@
           <button type="submit" class="btn">Register</button>
         </form>
 
-        <a href="login.php">Already have an account? Login</a>
+        <a href="../login/login.php">Already have an account? Login</a>
       </div>
     </div>
 

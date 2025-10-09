@@ -21,7 +21,7 @@
 </head>
 <body>
   <div class="container">
-    <a href="addBlogs.php" class="back-link">← Back to Blogs</a>
+    <a href="showBlog.php" class="back-link">← Back to Blogs</a>
     <h2>Add New Blog</h2>
 
     <form action="../php_folder/insertBlog.php" method="POST" enctype="multipart/form-data">
@@ -53,5 +53,9 @@
       <button type="submit" class="btn">Save Blog</button>
     </form>
   </div>
+  <footer style="text-align:center; padding:15px 0; background:#1e293b; color:white; position:fixed; width:100%; bottom:0;">
+    NepalTechGroup - Tech Company
+  </footer>
+
 </body>
 </html>
