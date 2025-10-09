@@ -144,8 +144,6 @@
     <li><a href="landingpage.php" style="color:inherit; text-decoration:none; display:block;">Dashboard</a></li>
     <li><a href="addBlogs.php" style="color:inherit; text-decoration:none; display:block;">Blogs</a></li>
     <li><a href="addBike.php" style="color:inherit; text-decoration:none; display:block;">Bikes</a></li>
-    <li><a href="reports.php" style="color:inherit; text-decoration:none; display:block;">Reports</a></li>
-    <li><a href="settings.php" style="color:inherit; text-decoration:none; display:block;">Settings</a></li>
     <li><a href="../Home/home.php" style="color:inherit; text-decoration:none; display:block;">Logout</a></li>
   </ul>
 </div>

@@ -62,8 +62,6 @@
     <li><a href="landingpage.php" style="color:inherit; text-decoration:none; display:block;">Dashboard</a></li>
     <li><a href="addBlogs.php" style="color:inherit; text-decoration:none; display:block;">Blogs</a></li>
     <li style="background:#334155;"><a href="addBike.php" style="color:inherit; text-decoration:none; display:block;">Bikes</a></li>
-    <li><a href="reports.php" style="color:inherit; text-decoration:none; display:block;">Reports</a></li>
-    <li><a href="settings.php" style="color:inherit; text-decoration:none; display:block;">Settings</a></li>
     <li><a href="../Home/home.php" style="color:inherit; text-decoration:none; display:block;">Logout</a></li>
   </ul>
 </div>
@@ -79,7 +77,7 @@
     <!-- Form -->
     <div class="form-card">
       <h2>Bike Details</h2>
-      <form action="add_bike.php" method="POST" enctype="multipart/form-data">
+      <form action="../php_folder/add_bikes.php" method="POST" enctype="multipart/form-data">
         <label for="name">Bike Name</label>
         <input type="text" name="name" id="name" required>
 

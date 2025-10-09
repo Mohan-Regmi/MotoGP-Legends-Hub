@@ -29,7 +29,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Success
     $_SESSION['username'] = $username;
-    header("Location: ../Admin/landingpage.html"); // redirect after login
+    header("Location: ../Admin/landingpage.php"); // redirect after login
     exit();
 } else {
     // Fail

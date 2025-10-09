@@ -83,7 +83,6 @@
   <div class="nav-links">
     <a href="../Home/home.php">Home</a>
     <a href="../Bike/bike.php">Bike</a>
-    <a href="">Accessories</a>
     <a href="../Blogs/blogs.php">Blogs</a>
     <a href="../Rider/rider.php">Rider</a>
     <a href="../Contact/contact.php" style="color:#e10600">Contact Us</a>

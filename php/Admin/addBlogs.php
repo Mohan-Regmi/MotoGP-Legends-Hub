@@ -54,8 +54,6 @@ $result = $conn->query($sql);
     <li><a href="landingpage.php" style="color:inherit; text-decoration:none; display:block;">Dashboard</a></li>
     <li><a href="addBlogs.php" style="color:inherit; text-decoration:none; display:block;">Blogs</a></li>
     <li><a href="addBike.php" style="color:inherit; text-decoration:none; display:block;">Bikes</a></li>
-    <li><a href="reports.php" style="color:inherit; text-decoration:none; display:block;">Reports</a></li>
-    <li><a href="settings.php" style="color:inherit; text-decoration:none; display:block;">Settings</a></li>
     <li><a href="../Home/home.php" style="color:inherit; text-decoration:none; display:block;">Logout</a></li>
      </ul>
   </div>
@@ -64,7 +62,7 @@ $result = $conn->query($sql);
   <div class="main">
     <div class="header">
       <h1>Manage Blogs</h1>
-      <a href="add_blog.html" class="btn">Add New Blog</a>
+      <a href="insertBlogs.php" class="btn">Add New Blog</a>
     </div>
 
     <!-- Blogs Table -->

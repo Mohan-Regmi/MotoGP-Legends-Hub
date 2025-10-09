@@ -20,7 +20,7 @@
     .navbar .nav-links a:hover {color: rgb(224, 6, 6);}
     .login_btn {padding: 8px 18px; border: none; background: rgb(224, 6, 6); color: white; border-radius: 6px; cursor: pointer; transition: 0.3s;}
     .login_btn:hover {background: #ff1a1a;}
-    
+
     /* Hero Blog */
     .middle_blog_part{display:flex;flex-wrap:wrap;gap:30px;margin-top:40px;}
     .left_blog{flex:2;}
@@ -57,7 +57,6 @@
   <div class="nav-links">
     <a href="../Home/home.php">Home</a>
     <a href="../Bike/bike.php">Bike</a>
-    <a href="">Accessories</a>
     <a href="../Blogs/blogs.php">Blogs</a>
     <a href="../Rider/rider.php">Rider</a>
     <a href="../contact/contact.php">Contact Us</a>
