@@ -182,7 +182,7 @@
   </div>
   <div class="nav-links">
     <a href="../Home/home.php" class="anchor_tag">Home</a>
-    <a href="../Bike/bike.php" class="anchor_tag">Bike</a>
+    <a href="../Bike/bike.php" class="anchor_tag">Bike</a>    
     <a href="../Blogs/blogs.php" class="anchor_tag">Blogs</a>
     <a href="../Rider/rider.php" class="anchor_tag">Rider</a>
     <a href="../contact/contact.php" class="anchor_tag">Contact Us</a>

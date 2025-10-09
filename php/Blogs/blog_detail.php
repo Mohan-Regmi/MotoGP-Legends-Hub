@@ -30,6 +30,18 @@
 </head>
 <body>
 <div class="container">
+  <nav>
+    <a href=""><img src="../../assets/ducati logo.png" alt="Logo" width="120"/></a>
+    <div>
+      <a href="../Home/home.php" class="anchor_tag">Home</a>
+      <a href="../Bike/bike.php" class="anchor_tag">Bike</a>
+      <a href="blogs.php" class="anchor_tag">Blogs</a>
+      <a href="../Rider/rider.php" class="anchor_tag">Rider</a>
+      <a href="../contact/contact.php" class="anchor_tag">Contact Us</a>
+      <a href="../login/login.php"><button class="login_btn">LogIn</button></a>
+    </div>
+  </nav>
+</div>
     
 <nav class="navbar">
   <div class="logo">
