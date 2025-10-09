@@ -34,7 +34,6 @@ nav .anchor_tag:hover{background:#e00606;color:#fff;}
     <div>
       <a href="../Home/home.php" class="anchor_tag">Home</a>
       <a href="../Bike/bike.php" class="anchor_tag">Bike</a>
-      <a href="" class="anchor_tag">Accessories</a>
       <a href="blogs.php" class="anchor_tag">Blogs</a>
       <a href="../Rider/rider.php" class="anchor_tag">Rider</a>
       <a href="../contact/contact.php" class="anchor_tag">Contact Us</a>

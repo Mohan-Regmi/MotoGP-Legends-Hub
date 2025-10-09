@@ -15,7 +15,6 @@ Pages:
 Home
 Contact Us
 Blogs
-Accessories
 Bike
 
 Database Tables:
