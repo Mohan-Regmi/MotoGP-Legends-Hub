@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+      }
+
+      .main_login_form {
+        background: #fff;
+        border: 2px solid #e10600; /* MotoGP red */
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #e10600;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .login_content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin: 10px 0 5px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #e10600;
+        box-shadow: 0 0 5px rgba(225, 6, 0, 0.5);
+      }
+
+      .login_btn {
+        background: #e10600;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        margin: 15px 0;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s ease;
+        width: 100%;
+      }
+
+      .login_btn:hover {
+        background: #b30500;
+        transform: scale(1.02);
+      }
+
+      .a_login_btn button {
+        background: #000;
+        color: #fff;
+        margin-top: 5px;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      a:hover {
+        color: #e10600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main_login_form">
+        <h1>Login</h1>
+        <div class="login_content">
+          <form action="../php_folder/login.php" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" required /> <br> <br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" required /> <br> <br><br>
+
+            <a href="../Register/register.php">Create new account</a>
+
+            <button type="submit" class="login_btn">Submit</button>
+          </form>
+
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const pass = document.getElementById("password").value;
+
+      // hardcoded login credentials
+      if (email === "test@example.com" && pass === "123456") {
+        alert("Login successful!");
+        window.location.href = "blogs.php";
+      } else {
+        alert("Invalid email or password!");
+      }
+    }
+  </script>
+</body>
+</html>
