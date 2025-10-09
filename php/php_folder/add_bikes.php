@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$name', '$imageName', '$description', '$type', '$mileage')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('New bike added successfully!'); window.location.href='add_bike.php';</script>";
+        echo "<script>alert('New bike added successfully!'); window.location.href='../Admin/addBike.php';</script>";
     } else {
         echo "Error: " . $conn->error;
     }

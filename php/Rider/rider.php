@@ -143,10 +143,10 @@
       if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
           echo '<div class="rider_card">
-                  <img src="'.phpspecialchars($row['image']).'" alt="'.phpspecialchars($row['name']).'">
-                  <h3>'.phpspecialchars($row['name']).'</h3>
-                  <p>Team: '.phpspecialchars($row['team']).'</p>
-                  <p>Country: '.phpspecialchars($row['country']).'</p>
+                  <img src="'.htmlspecialchars($row['image']).'" alt="'.htmlspecialchars($row['name']).'">
+                  <h3>'.htmlspecialchars($row['name']).'</h3>
+                  <p>Team: '.htmlspecialchars($row['team']).'</p>
+                  <p>Country: '.htmlspecialchars($row['country']).'</p>
                 </div>';
         }
       } else {

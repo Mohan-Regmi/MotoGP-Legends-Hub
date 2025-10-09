@@ -1,14 +1,3 @@
-<?php
-// Connect to database
-$conn = new mysqli("localhost", "root", "", "motogp");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch all blogs
-$sql = "SELECT * FROM blogs ORDER BY published_date DESC";
-$result = $conn->query($sql);
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,19 +41,19 @@ $result = $conn->query($sql);
     <h2>Admin Panel</h2>
     <ul>
     <li><a href="landingpage.php" style="color:inherit; text-decoration:none; display:block;">Dashboard</a></li>
-    <li><a href="addBlogs.php" style="color:inherit; text-decoration:none; display:block;">Blogs</a></li>
+    <li><a href="showBlog.php" style="color:inherit; text-decoration:none; display:block;">Blogs</a></li>
     <li><a href="addBike.php" style="color:inherit; text-decoration:none; display:block;">Bikes</a></li>
-    <li><a href="reports.php" style="color:inherit; text-decoration:none; display:block;">Reports</a></li>
-    <li><a href="settings.php" style="color:inherit; text-decoration:none; display:block;">Settings</a></li>
-    <li><a href="../Home/home.php" style="color:inherit; text-decoration:none; display:block;">Logout</a></li>
-     </ul>
+    <li>
+  <a href="../Home/home.php" id="logoutLink" style="color:inherit; text-decoration:none; display:block;">
+    Logout
+  </a>     </ul>
   </div>
 
   <!-- Main Content -->
   <div class="main">
     <div class="header">
       <h1>Manage Blogs</h1>
-      <a href="add_blog.html" class="btn">Add New Blog</a>
+      <a href="insertBlogs.php" class="btn">Add New Blog</a>
     </div>
 
     <!-- Blogs Table -->
@@ -102,8 +91,32 @@ $result = $conn->query($sql);
       </tbody>
     </table>
   </div>
+  <footer style="text-align:center; padding:15px 0; background:#1e293b; color:white; position:fixed; width:100%; bottom:0;">
+    NepalTechGroup - Tech Company
+  </footer>
+  <script>
+      document.getElementById("logoutLink").addEventListener("click", function(event) {
+    const confirmed = confirm("Are you sure you want to logout?");
+    if (!confirmed) {
+      // Prevent navigation if user clicks Cancel
+      event.preventDefault();
+    }
+  });
+
+    </script>
 
 </body>
 </html>
+<?php
+// Connect to database
+$conn = new mysqli("localhost", "root", "", "motogp");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch all blogs
+$sql = "SELECT * FROM blogs ORDER BY published_date DESC";
+$result = $conn->query($sql);
+?>
 
 <?php $conn->close(); ?>

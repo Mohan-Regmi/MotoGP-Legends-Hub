@@ -8,14 +8,16 @@
     body{background:#0f172a;color:#fff;font-family:'Poppins',sans-serif;margin:0;}
     .container{width:90%;margin:auto;}
 
-/* Navbar */
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;
-    border-bottom:2px solid #e00606;position:sticky;top:0;background:#0f172a;z-index:100;}
-nav .anchor_tag{margin:0 10px;padding:8px 15px;border-radius:5px;transition:0.3s;}
-nav .anchor_tag:hover{background:#e00606;color:#fff;}
-.login_btn{background:#e00606;color:#fff;border:none;padding:8px 20px;border-radius:5px;cursor:pointer;transition:0.3s;}
-.login_btn:hover{transform:scale(1.05);box-shadow:0 0 15px #e00606;}
-
+    /* Navbar */
+    .navbar {width: 100%; background: #0f172a; padding: 15px 40px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 1000;}
+    .navbar .logo img {height: 50px; width: auto;}
+    .navbar .nav-links {display: flex; align-items: center; gap: 25px;}
+    .navbar .nav-links a {color: white; text-decoration: none; font-weight: 500; transition: color 0.3s ease;}
+    .navbar .nav-links a:hover {color: rgb(224, 6, 6);}
+    .login_btn {padding: 8px 18px; border: none; background: rgb(224, 6, 6); color: white; border-radius: 6px; cursor: pointer; transition: 0.3s;}
+    .login_btn:hover {background: #ff1a1a;}
 
    
     .blog_detail{margin:40px 0;}
@@ -27,7 +29,6 @@ nav .anchor_tag:hover{background:#e00606;color:#fff;}
   </style>
 </head>
 <body>
-
 <div class="container">
   <nav>
     <a href=""><img src="../../assets/ducati logo.png" alt="Logo" width="120"/></a>
@@ -41,7 +42,24 @@ nav .anchor_tag:hover{background:#e00606;color:#fff;}
     </div>
   </nav>
 </div>
+    
+<nav class="navbar">
+  <div class="logo">
+    <a href="../Home/home.php"><img src="../../assets/ducati logo.png" alt="Logo" /></a>
+  </div>
+  <div class="nav-links">
+    <a href="../Home/home.php">Home</a>
+    <a href="../Bike/bike.php">Bike</a>
+    <a href="../Blogs/blogs.php">Blogs</a>
+    <a href="../Rider/rider.php">Rider</a>
+    <a href="../contact/contact.php">Contact Us</a>
+    <a href="../login/login.php"><button class="login_btn">LogIn</button></a>
+  </div>
+</nav>
 
+</div>
+<div class="container">
+    
 <div class="container blog_detail">
 <?php
 $conn = new mysqli("localhost", "root", "", "motogp");
@@ -68,5 +86,6 @@ $conn->close();
 ?>
 </div>
 
+</div>
 </body>
 </html>
