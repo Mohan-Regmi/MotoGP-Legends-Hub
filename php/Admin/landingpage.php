@@ -169,11 +169,11 @@
     <div class="card-container">
       <div class="card">
         <h3>Total Users</h3>
-        <p>12,340</p>
+        <p>10,340</p>
       </div>
       <div class="card">
         <h3>Active Users</h3>
-        <p>8,540</p>
+        <p>2,540</p>
       </div>
       <div class="card">
         <h3>Total Bikes</h3>
@@ -181,7 +181,7 @@
       </div>
       <div class="card">
         <h3>Rides Today</h3>
-        <p>1,120</p>
+        <p>120</p>
       </div>
     </div>
 
@@ -248,13 +248,11 @@
     });
 
   document.getElementById("logoutLink").addEventListener("click", function(event) {
-    // Show confirmation popup
     const confirmed = confirm("Are you sure you want to logout?");
     if (!confirmed) {
       // Prevent navigation if user clicks Cancel
       event.preventDefault();
     }
-    // If OK, link will proceed as normal
   });
 
 

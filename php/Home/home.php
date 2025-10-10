@@ -140,7 +140,7 @@
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2025 MotoGP World. All Rights Reserved.</p>
+  <p>&copy; 2025 Nepal MotoGP World. All Rights Reserved.</p>
 </footer>
 
 </body>
