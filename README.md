@@ -18,9 +18,7 @@ Blogs
 Bike
 
 Database Tables:
-Students
-Lecturers
-Marks
+MotoGp related tables
 
 Link:
 https://github.com/Mohan-Regmi/MotoGP-Legends-Hub
