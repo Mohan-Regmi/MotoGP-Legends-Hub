@@ -218,22 +218,27 @@
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
-          while($row = $result->fetch_assoc()) {
-              echo '<div class="card1">
-                      <div class="card_header">
-                        <img src="' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['name']) . '">
-                      </div>
-                      <div class="card_body">
-                        <p>' . htmlspecialchars($row['name']) . '</p>
-                        <p>' . htmlspecialchars($row['description']) . '</p>
-                        <p>Type: ' . htmlspecialchars($row['type']) . '</p>
-                        <p>Mileage: ' . htmlspecialchars($row['mileage']) . ' km/l</p>
-                      </div>
-                    </div>';
-          }
-      } else {
-          echo "<p>No bikes found.</p>";
-      }
+        while($row = $result->fetch_assoc()) {
+            // Convert the image blob to base64
+            $base64Image = base64_encode($row['image']);
+            $imageType = $row['image_type']; // e.g., image/jpeg, image/png
+    
+            echo '<div class="card1">
+                    <div class="card_header">
+                        <img src="data:' . $imageType . ';base64,' . $base64Image . '" alt="' . htmlspecialchars($row['name']) . '">
+                    </div>
+                    <div class="card_body">
+                      <p>' . htmlspecialchars($row['name']) . '</p>
+                      <p>' . htmlspecialchars($row['description']) . '</p>
+                      <p>Type: ' . htmlspecialchars($row['type']) . '</p>
+                      <p>Mileage: ' . htmlspecialchars($row['mileage']) . ' km/l</p>
+                    </div>
+                  </div>';
+        }
+    } else {
+        echo "<p>No bikes found.</p>";
+    }
+    
 
       $conn->close();
     ?>
@@ -242,7 +247,7 @@
 
 <!-- Footer -->
 <footer>
-  <p>© 2024 Ducati Company & Co. | Designed with ❤️ for Riders</p>
+  <p>© 2025 MotoGP World. All Rights Reserved.</p>
 </footer>
 
 </body>

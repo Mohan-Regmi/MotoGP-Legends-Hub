@@ -99,18 +99,18 @@
   <h2>Top Riders</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://m.media-amazon.com/images/I/71ZK5+JYfZL._AC_UF894,1000_QL80_.jpg" alt="Marc Marquez"/>
+      <img src="../../assets/Marc_Márquez_portrait_2022_(cropped).jpg" alt="Marc Marquez"/>
       <h3>Marc Márquez</h3>
       <p>Six-time MotoGP World Champion. Known for his fearless racing style.</p>
     </div>
     <div class="card">
-      <img src="https://m.media-amazon.com/images/I/81lfVdY82oL._AC_UF894,1000_QL80_.jpg" alt="Valentino Rossi"/>
+      <img src="../../assets/rossi.jpeg" alt="Valentino Rossi"/>
       <h3>Valentino Rossi</h3>
       <p>The Doctor. MotoGP legend with an incredible career spanning two decades.</p>
     </div>
     <div class="card">
-      <img src="https://m.media-amazon.com/images/I/71KXjq3PszL._AC_UF894,1000_QL80_.jpg" alt="Francesco Bagnaia"/>
-      <h3>Francesco Bagnaia</h3>
+    <img src="../../assets/bag.jpeg" alt="Valentino Rossi"/>
+    <h3>Francesco Bagnaia</h3>
       <p>Ducati rider and 2022 MotoGP World Champion, leading a new generation of racers.</p>
     </div>
   </div>
@@ -121,18 +121,18 @@
   <h2>Iconic Bikes</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://m.media-amazon.com/images/I/818RsqgmYNL._UF1000,1000_QL80_.jpg" alt="Ducati MotoGP"/>
-      <h3>Ducati Desmosedici GP</h3>
+    <img src="../../assets/diavel jp.jpg" alt="Valentino Rossi"/>
+    <h3>Ducati Desmosedici GP</h3>
       <p>Powerful MotoGP machine with unmatched acceleration and speed.</p>
     </div>
     <div class="card">
-      <img src="https://m.media-amazon.com/images/I/71rZ7C8pR1L._AC_UF894,1000_QL80_.jpg" alt="Yamaha YZR-M1"/>
-      <h3>Yamaha YZR-M1</h3>
+    <img src="../../assets/black r1.jpg" alt="Valentino Rossi"/>
+    <h3>Yamaha YZR-M1</h3>
       <p>Legendary bike that carried Rossi to multiple championships.</p>
     </div>
     <div class="card">
-      <img src="https://m.media-amazon.com/images/I/81pXy+0TATL._AC_UF894,1000_QL80_.jpg" alt="Honda RC213V"/>
-      <h3>Honda RC213V</h3>
+    <img src="../../assets/ktmrc.png" alt="Valentino Rossi"/>
+    <h3>Honda RC213V</h3>
       <p>Trusted by Marc Márquez to dominate the MotoGP grid for years.</p>
     </div>
   </div>

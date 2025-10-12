@@ -48,6 +48,7 @@
       </select>
 
       <label for="featured_image">Featured Image</label>
+
       <input type="file" id="featured_image" name="featured_image" accept="image/*">
 
       <button type="submit" class="btn">Save Blog</button>
