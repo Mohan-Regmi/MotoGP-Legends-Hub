@@ -27,6 +27,10 @@ https://github.com/Mohan-Regmi/MotoGP-Legends-Hub
 
 
 
+MAIN BRANCH IS: ritesh-branch-logic 
+
+Not main branch 
+
 
 motogp database is avaialble in this folder named as motogp.sql 
 
