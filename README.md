@@ -24,3 +24,10 @@ Marks
 
 Link:
 https://github.com/Mohan-Regmi/MotoGP-Legends-Hub
+
+
+
+
+motogp database is avaialble in this folder named as motogp.sql 
+
+you can import that database and use our website

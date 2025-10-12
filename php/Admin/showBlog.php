@@ -1,3 +1,14 @@
+<?php
+// Connect to database
+$conn = new mysqli("localhost", "root", "", "motogp");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch all blogs
+$sql = "SELECT * FROM blogs";
+$result = $conn->query($sql);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,13 +51,11 @@
   <div class="sidebar">
     <h2>Admin Panel</h2>
     <ul>
-    <li><a href="landingpage.php" style="color:inherit; text-decoration:none; display:block;">Dashboard</a></li>
-    <li><a href="showBlog.php" style="color:inherit; text-decoration:none; display:block;">Blogs</a></li>
-    <li><a href="addBike.php" style="color:inherit; text-decoration:none; display:block;">Bikes</a></li>
-    <li>
-  <a href="../Home/home.php" id="logoutLink" style="color:inherit; text-decoration:none; display:block;">
-    Logout
-  </a>     </ul>
+      <li><a href="landingpage.php">Dashboard</a></li>
+      <li><a href="showBlog.php">Blogs</a></li>
+      <li><a href="addBike.php">Bikes</a></li>
+      <li><a href="../Home/home.php" id="logoutLink">Logout</a></li>
+    </ul>
   </div>
 
   <!-- Main Content -->
@@ -65,58 +74,52 @@
           <th>Category</th>
           <th>Featured Image</th>
           <th>Author</th>
-          <th>Published Date</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <?php
-        if ($result->num_rows > 0) {
+        if ($result && $result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
+
+                // Handle image display
+                if (!empty($row['featured_image'])) {
+                    // If it’s a BLOB, encode to base64
+                    $imgSrc = 'data:image/jpeg;base64,' . base64_encode($row['featured_image']);
+                } else {
+                    // Default or missing image
+                    $imgSrc = '../../assets/no-image.png';
+                }
+
                 echo '<tr>
                     <td>'.$row['id'].'</td>
                     <td>'.htmlspecialchars($row['title']).'</td>
                     <td>'.htmlspecialchars($row['category']).'</td>
-                    <td><img src="'.htmlspecialchars($row['featured_image']).'" alt="Image"></td>
+                    <td><img src="'.$imgSrc.'" alt="Image"></td>
                     <td>'.htmlspecialchars($row['author']).'</td>
-                    <td>'.htmlspecialchars($row['published_date']).'</td>
                     <td>'.htmlspecialchars($row['status']).'</td>
-                    
                 </tr>';
             }
         } else {
-            echo '<tr><td colspan="8" style="text-align:center;">No blogs found.</td></tr>';
+            echo '<tr><td colspan="6" style="text-align:center;">No blogs found.</td></tr>';
         }
         ?>
       </tbody>
     </table>
   </div>
+
   <footer style="text-align:center; padding:15px 0; background:#1e293b; color:white; position:fixed; width:100%; bottom:0;">
     NepalTechGroup - Tech Company
   </footer>
-  <script>
-      document.getElementById("logoutLink").addEventListener("click", function(event) {
-    const confirmed = confirm("Are you sure you want to logout?");
-    if (!confirmed) {
-      // Prevent navigation if user clicks Cancel
-      event.preventDefault();
-    }
-  });
 
-    </script>
+  <script>
+    document.getElementById("logoutLink").addEventListener("click", function(event) {
+      const confirmed = confirm("Are you sure you want to logout?");
+      if (!confirmed) event.preventDefault();
+    });
+  </script>
 
 </body>
 </html>
-<?php
-// Connect to database
-$conn = new mysqli("localhost", "root", "", "motogp");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch all blogs
-$sql = "SELECT * FROM blogs ORDER BY published_date DESC";
-$result = $conn->query($sql);
-?>
 
 <?php $conn->close(); ?>

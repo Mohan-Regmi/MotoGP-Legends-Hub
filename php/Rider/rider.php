@@ -101,7 +101,6 @@
       margin-top:50px;
       border-top:3px solid #e00606;
     }
-
   </style>
 </head>
 <body>
@@ -134,24 +133,26 @@
     <?php
       // DB connection
       $conn = new mysqli("localhost", "root", "", "motogp");
+      if ($conn->connect_error) die("Connection failed: ".$conn->connect_error);
 
-      if($conn->connect_error){ die("Connection failed: ".$conn->connect_error); }
-
-      $sql = "SELECT id,name,country,team,image FROM riders ORDER BY id ASC";
+      $sql = "SELECT id, name, country, team, image FROM riders ORDER BY id ASC";
       $result = $conn->query($sql);
 
-      if($result->num_rows > 0){
+      if($result && $result->num_rows > 0){
         while($row = $result->fetch_assoc()){
-          echo '<div class="rider_card">
-                  <img src="'.htmlspecialchars($row['image']).'" alt="'.htmlspecialchars($row['name']).'">
-                  <h3>'.htmlspecialchars($row['name']).'</h3>
-                  <p>Team: '.htmlspecialchars($row['team']).'</p>
-                  <p>Country: '.htmlspecialchars($row['country']).'</p>
-                </div>';
+            // Just use the path from the database directly
+            $imgPath = htmlspecialchars($row['image']); 
+    
+            echo '<div class="rider_card">
+                    <img src="'.$imgPath.'" alt="'.htmlspecialchars($row['name']).'">
+                    <h3>'.htmlspecialchars($row['name']).'</h3>
+                    <p>Team: '.htmlspecialchars($row['team']).'</p>
+                    <p>Country: '.htmlspecialchars($row['country']).'</p>
+                  </div>';
         }
-      } else {
-        echo "<p style='color:#fff;'>No riders found.</p>";
-      }
+    } else {
+        echo "<p style='color:#fff; text-align:center;'>No riders found.</p>";
+    }
 
       $conn->close();
     ?>
@@ -176,7 +177,7 @@
 
 <!-- Footer -->
 <footer>
-  <p>© 2024 Ducati Company & Co. | Designed with ❤️ for Riders</p>
+  <p>© 2025 MotoGP World. All Rights Reserved.</p>
 </footer>
 
 </body>

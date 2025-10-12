@@ -69,15 +69,19 @@ $conn = new mysqli("localhost", "root", "", "motogp");
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
 // Big blog
-$sql_big = "SELECT * FROM blogs WHERE status='published' ORDER BY published_date DESC LIMIT 1";
+$sql_big = "SELECT * FROM blogs WHERE status='published' LIMIT 1";
 $result_big = $conn->query($sql_big);
 if ($result_big->num_rows > 0) {
+  $base64Image2 = base64_encode($row['featured_image']);
+  $imageType2 = $row['image_type'];
+  
     $big = $result_big->fetch_assoc();
     echo '<div class="container middle_blog_part">
             <div class="left_blog">
               <div class="blog_big_card">
+    <img src="../../assets/fabo.jpg" alt="Valentino Rossi"/>
+
                 <a href="blog_detail.php?id='.$big['id'].'">
-                  <img src="'.$big['featured_image'].'" alt="">
                   <span>'.$big['category'].'</span>
                   <h2>'.$big['title'].'</h2>
                 </a>
@@ -100,13 +104,20 @@ if ($result_big->num_rows > 0) {
 
 // Blog cards
 echo '<div class="container blog_card_container">';
-$sql_cards = "SELECT * FROM blogs WHERE status='published' ORDER BY published_date DESC LIMIT 6";
+$sql_cards = "SELECT * FROM blogs WHERE status='published' LIMIT 6";
 $result_cards = $conn->query($sql_cards);
+
+      
+
+           
 if ($result_cards->num_rows > 0) {
     while($row = $result_cards->fetch_assoc()) {
+      $base64Image = base64_encode($row['featured_image']);
+      $imageType = $row['image_type'];
+      
         echo '<div class="card1">
                 <div class="card_header">
-                  <img src="'.$row['featured_image'].'" alt="">
+                <img src="data:' . $imageType . ';base64,' . $base64Image . '" alt="' . htmlspecialchars($row['name']) . '">
                 </div>
                 <div class="card_body">
                   <p class="home_card_p">'.$row['category'].'</p>
